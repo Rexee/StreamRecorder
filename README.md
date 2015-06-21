@@ -25,8 +25,9 @@ Just unzip release file in local folder and run "streamrecorder.cmd". In console
 Open this address in internet browser and you will be in StreamRecorder!  
 First of all you should set up StreamRecorder. Fill fields *Livestreamer.exe path* - path to Livestreamer.exe, *output video folder* - path, where video will be recording, and *rescan time* - interval in seconds after which StreamRecorder will be check - if stream online and try to record.
 
-*Other OS*  
+*Other OS*
 Didnt'n tested :).
+
 
   [Livestreamer]: https://github.com/chrippa/livestreamer "Livestreamer"
   [Main]: https://cloud.githubusercontent.com/assets/8672252/8272966/87fbe0cc-1861-11e5-8a7c-e5e0f52ec0c3.jpg
