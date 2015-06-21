@@ -19,13 +19,13 @@ It allow to track streams in background and when some of tracked stream is go on
 
 
 ## Set Up
-####Windows  
+######Windows
 Just unzip release file in local folder and run "**streamrecorder.cmd**". In console you will see something like  
 **"Server started at address: http://192.168.1.100/streamrecorder"**.  
 Open this address in internet browser and you will be in StreamRecorder!  
 First of all you should set up StreamRecorder. Fill fields *Livestreamer.exe path* - path to Livestreamer.exe, *output video folder* - path, where video will be recording, and *rescan time* - interval in seconds after which StreamRecorder will be check - if stream online and try to record.
 
-####Other OS
+######Other OS
 Didnt'n tested :).
 
 
