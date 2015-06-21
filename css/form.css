@@ -1,0 +1,123 @@
+html,
+body {
+	margin-left: 20px;
+}
+
+body {
+	background: #fff;
+	color: #595959;
+	font: 14px/18px Arial, Helvetica, sans-serif;
+}
+
+button {
+	background: #1976D2;
+	color: #FFF;
+}
+
+input[type="text"],
+.checkboxSR label
+{
+	background: #fcfff4;
+	border: 1px #90caf9 solid;
+}
+
+html { overflow-y: scroll; }
+
+h1 { font-size: 22px; }
+h2 { font-size: 18px; }
+
+.label {
+	width: 161px;
+}
+
+.title,
+.form-button,
+.checkboxSR
+{
+	margin-left: 165px;
+}
+
+input,
+label,
+button{
+	margin: 2px 0;
+	font: inherit;
+}
+
+.label {
+	display: inline-block;
+	}
+
+button {
+	cursor: pointer;
+	padding: 4 16px;
+	height: 28px;
+	border: 0;
+}
+
+input[type="text"]{
+	padding: 4px 4px;
+	width: 400px;
+	font: inherit;
+}
+	
+input.inputShort {
+	width: 40px;
+} 
+
+#header {
+    padding: 10;
+    height: 32px;
+}
+
+.title {
+	margin-bottom: 15px;
+}
+
+input[type="checkbox"]{ visibility: hidden; }
+
+.checkboxSR,
+.checkboxSR label
+{
+	width: 16px;
+	height: 16px;
+}
+
+.checkboxSR {
+	position: relative;
+	margin-top: -32px;
+}
+
+.checkboxSR label {
+	position: absolute;
+	top: -4px;
+	left: 0;
+}
+
+.checkboxSR label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 2px;
+	left: 2px;
+	border: 3px solid;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.checkboxSR input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}

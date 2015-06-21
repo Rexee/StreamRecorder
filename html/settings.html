@@ -1,0 +1,29 @@
+<HTML>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/form.css"/>
+</head>
+
+<header id="header">
+    <h1>Settings</h1>
+</header>
+
+<form id="settings" method="POST">
+    <p>
+        <label class="label">Livestreamer.exe path</label>
+        <input type="text" name="lspath" value="{livestreamerEXE}"><br/>
+        <label class="label">Output video folder</label>
+        <input type="text" name="output" value="{outputFolder}"><br/>
+        <label class="label">Rescan time, sec</label>
+        <input class="inputShort" type="text" name="rescan" maxlength="3" value="{rescanTime}"><br/>
+        <label class="label">Write logs</label>
+
+    <div class="checkboxSR">
+        <input type="checkbox" value="true" id="checkboxSR" name="logs" {writeLogs}/>
+        <label for="checkboxSR"></label>
+    </div>
+
+    </p>
+    <button class="form-button">Save</button>
+</form>
+
+</HTML>
