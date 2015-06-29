@@ -1,7 +1,7 @@
 StreamRecorder
 ===
 [![Latest release][badge-release]][Releases]  
-**Web interface for Livestreamer [Livestreamer][Livestreamer]**
+**Web interface for [Livestreamer][Livestreamer]**
 ---
 
 ![main][main]
