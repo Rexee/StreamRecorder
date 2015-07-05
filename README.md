@@ -1,7 +1,7 @@
 StreamRecorder
 ===
 [![Latest release][badge-release]][Releases]  
-**Web interface for [Livestreamer][Livestreamer]**
+**Automatically track and record video-streams**
 ---
 
 ![main][main]
