@@ -30,7 +30,7 @@ Didnt'n tested :).
 
 
   [Livestreamer]: https://github.com/chrippa/livestreamer "Livestreamer"
-  [Main]: https://cloud.githubusercontent.com/assets/8672252/8272966/87fbe0cc-1861-11e5-8a7c-e5e0f52ec0c3.jpg
+  [Main]: https://cloud.githubusercontent.com/assets/8672252/8512412/adab8230-2349-11e5-93bc-5fd7263508fd.png
   [Releases]: https://github.com/Rexee/StreamRecorder/releases "Releases"
   [Java]: https://java.com/download "Java"
   [badge-release]: https://img.shields.io/badge/Release-1.0-green.svg "Latest release"
