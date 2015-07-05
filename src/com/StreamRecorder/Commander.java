@@ -155,7 +155,7 @@ public class Commander {
 
     public String getHTML_Main() {
 
-        String errorHTML = "<HTML>No settins html template</HTML>";
+        String errorHTML = "<HTML>No index html template</HTML>";
 
         Path pathFile = Paths.get(Constants.HTML_PAGE_MAIN);
         if (!Files.exists(pathFile)) {
@@ -200,6 +200,8 @@ public class Commander {
             byte[] encodedIndex = Files.readAllBytes(pathFile);
             htmlStringIndex = new String(encodedIndex, Constants.DEFAULT_CHARSET);
 
+
+            htmlStringIndex = htmlStringIndex.replace("{version}", Constants.VERSION);
             htmlStringIndex = htmlStringIndex.replace("{rescanTime}", Integer.toString(mRescanTime));
             htmlStringIndex = htmlStringIndex.replace("{trInline}", rows.toString());
 

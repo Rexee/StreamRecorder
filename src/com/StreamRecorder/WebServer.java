@@ -31,7 +31,7 @@ public class WebServer {
         try {
 //            InetAddress.getLoopbackAddress()
             String serverAddress = InetAddress.getLocalHost().getHostAddress();
-            System.out.println("Server started at address: http://" + serverAddress + "/" + Constants.HTTP_PAGE_MAIN);
+            System.out.println("Server started at address: http://" + serverAddress + Constants.HTTP_PAGE_MAIN);
 
             server = HttpServer.create(new InetSocketAddress(serverAddress, Constants.HTTP_PORT), 0);
         } catch (IOException e) {
@@ -43,7 +43,8 @@ public class WebServer {
         server.createContext(Constants.HTTP_PAGE_REMOVE, new Handler_Remove());
         server.createContext(Constants.HTTP_PAGE_ADD, new Handler_Add());
         server.createContext(Constants.HTTP_PAGE_SETTINGS, new Handler_Settings());
-        server.createContext(Constants.HTTP_CSS, new Handler_CSS());
+        server.createContext(Constants.HTTP_CSS, new Handler_Other());
+        server.createContext(Constants.HTTP_FAVICON, new Handler_Other());
         server.setExecutor(null);
         server.start();
     }
@@ -203,27 +204,33 @@ public class WebServer {
         }
     }
 
-    private class Handler_CSS implements HttpHandler {
+    private class Handler_Other implements HttpHandler {
 
         @Override
         public void handle(HttpExchange httpExchange) throws IOException {
             String requestMethod = httpExchange.getRequestMethod();
 
-            if (requestMethod.contentEquals("GET")) {
-                String path = "." + httpExchange.getRequestURI().getPath();
-                File cssFile = new File(path);
-                if (!cssFile.exists()) return;
+            if ("get".equalsIgnoreCase(requestMethod)) {
+                String uriFilePath = httpExchange.getRequestURI().getPath();
+                String contentType = "text/css";
+                if (uriFilePath.equals(Constants.HTTP_FAVICON)) {
+                    contentType = "image/x-icon";
+                }
+
+                String path = "." + uriFilePath;
+                File otherFile = new File(path);
+                if (!otherFile.exists()) return;
 
                 Headers headers = httpExchange.getResponseHeaders();
-                headers.set("Content-Type", "text/css");
+                headers.set("Content-Type", contentType);
                 headers.set("Content-Encoding", "gzip");
                 headers.set("Connection", "keep-alive");
                 httpExchange.sendResponseHeaders(200, 0);
 
-                long toRead = cssFile.length();
+                long toRead = otherFile.length();
 
                 GZIPOutputStream gos = new GZIPOutputStream(httpExchange.getResponseBody());
-                BufferedInputStream bufread = new BufferedInputStream(new FileInputStream(cssFile));
+                BufferedInputStream bufread = new BufferedInputStream(new FileInputStream(otherFile));
 
                 byte buffer[] = new byte[2048];
                 int bytesRead = 0;
@@ -240,5 +247,3 @@ public class WebServer {
         }
     }
 }
-
-
