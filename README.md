@@ -10,8 +10,6 @@ StreamRecorder
 This is web interface for the [Livestreamer][Livestreamer].  
 It allow to track streams in background and when some of tracked stream is go online - start recording it to local file.
 
-**You can start StreamRecorder on your NAS and when you come back home from work, watch recorded streams!**
-
 
 ## Requirements
 * [Livestreamer][Livestreamer]
