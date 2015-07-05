@@ -7,8 +7,7 @@ StreamRecorder
 ![main][main]
 
 ## Description
-This is web interface for the [Livestreamer][Livestreamer].  
-It allow to track streams in background and when some of tracked stream is go online - start recording it to local file.
+This programm allow you to track streams in background and when some of tracked stream is go online - start recording it to local file. StreamRecorder is web interface for the [Livestreamer][Livestreamer].  
 
 
 ## Requirements
