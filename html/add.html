@@ -9,10 +9,10 @@
 
 <form id="streamAdd" method="POST">
     <p>
+        <label class="label">Full URL</label>
+        <input type="text" name="path" onpaste = "myFunction(event)"><br/>
         <label class="label">Name</label>
-        <input type="text" name="name"><br/>
-        <label class="label">Full path</label>
-        <input type="text" name="path"><br/>
+        <input type="text" name="name" id="name"><br/>
         <label class="label">Record</label>
 
     <div class="checkboxSR">
@@ -22,5 +22,21 @@
 
     </p>
     <button class="form-button">Add</button>
+	
+<script>
+function myFunction(e) {
+    var buff = e.clipboardData.getData('text/plain');
+    
+    if (buff.charAt(buff.length - 1) == '/') 
+        buff = buff.slice(0, buff.length - 1);
+    
+    var lastPos = buff.lastIndexOf('/');
+    if (lastPos > 0) 
+        buff = buff.slice(lastPos + 1);
+    
+    document.getElementById("name").value = buff;
+}
+</script>
+	
 </form>
 </HTML>
